@@ -1,0 +1,172 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="stylesheets/tailwind.css">
+</head>
+
+<body class="bg-white text-gray-900 font-sans antialiased">
+  <header>
+    <nav class="flex items-center bg-white">
+      <div class="flex-1 flex items-center">
+        <a class="flex items-center font-mono tracking-tighter" href="/index.html">
+          <span class="text-orange-800 text-4xl font-bold -mr-1">[</span>
+          <span class="text-3xl font-bold">T</span>
+          <span class="text-orange-800 text-4xl font-bold -ml-1">]</span>
+        </a>
+        <pre class="font-mono font-bold text-sm">v1.0</pre>
+      </div>
+      <ul class="flex-none flex font-mono font-bold text-sm uppercase">
+        <li class="flex-1 text-center mx-4">
+          <a href="#">Code</a>
+        </li>
+        <li class="flex-1 text-center mx-4">
+          <a href="#">Spec</a>
+        </li>
+        <li class="flex-1 text-center mx-4">
+          <a class="bg-gray-800 text-white rounded-sm px-4 py-2" href="#">Validate</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="">
+    <section class="pt-8 bg-orange-100">
+      <div class="flex items-end">
+        <div class="flex items-center font-mono tracking-tighter">
+          <span class="text-orange-800 text-8xl font-bold -mr-3">[</span>
+          <span class="text-7xl font-bold mt-3">T</span>
+          <span class="text-orange-800 text-8xl font-bold -ml-3">]</span>
+        </div>
+        <div class="font-mono leading-tight mb-6">
+          <h1 class="font-bold text-xl">TOML</h1>
+          <h2 class="text-xs text-orange-800">[Tom's Obvious Markup Language]</h2>
+        </div>
+      </div>
+      <h3 class="mt-2 font-semibold text-xl text-center">[a_config_file_format_for_humans]</h3>
+    </section>
+
+    <section class="pt-8 pb-12 bg-orange-100">
+      <code class="code rounded-t-lg">
+        <pre class="whitespace-pre-line text-white">
+          [<span class="text-blue-300">family</span>]
+          <span class="text-blue-600">spouse</span> = <span class="text-orange-500">"Aimee"</span>
+          <span class="text-blue-600">kids</span> = [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
+
+          [<span class="text-blue-300">foods</span>]
+          <span class="text-blue-600">favorite</span> = <span class="text-orange-500">"submarine sandwich"</span>
+          <span class="text-blue-600">acceptable</span> = <span class="text-orange-500">"pizza"</span>
+
+          <span class="text-blue-600">dob</span> = <span class="text-orange-500">"1978-04-16T07:32:00-05:00"</span>
+          <span class="text-blue-600">age</span> = <span class="text-green-500">41</span>
+          <span class="text-blue-600">coding</span> = true
+        </pre>
+      </code>
+      <nav>
+        <ul class="text-lg font-bold text-orange-700 flex rounded mx-4">
+          <li class="flex-1 py-2 text-center">
+            <a class="block" href="#">JSON</a>
+          </li>
+          <li class="flex-1 py-2 text-center">
+            <a href="">YAML</a>
+          </li>
+          <li class="flex-1 py-2 text-center bg-gray-900 text-gray-600 rounded-b">
+            <a href="#">TOML</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="mt-8 px-4">
+      <dl>
+        <dt class="title">[toml.prioritizes_humans]</dt>
+        <dd class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias amet corporis voluptates a cum perferendis ea eum perspiciatis odit officia, totam nulla culpa error facere eos dolorem natus id?</dd>
+
+        <dt class="mt-12 title">[toml.has_all_the_types]</dt>
+        <dd class="mt-2 text-gray-600">
+          <p>TOML has native support for:</p>
+          <ul class="mt-4 ml-2 list-disc list-inside">
+            <li>Key/Value Pairs</li>
+            <li>Array</li>
+            <li>Tables</li>
+            <li>Arrays of tables</li>
+            <li>Integers & Floats</li>
+            <li>Booleans</li>
+            <li>Dates (with and without offsets)</li>
+            <li>Times (with and without offsets)</li>
+          </uL>
+        </dd>
+
+        <dt class="mt-12 title">[toml.supported_everywhere]</dt>
+        <dd class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae molestias amet corporis voluptates a cum perferendis ea eum perspiciatis odit officia, totam nulla culpa error facere eos dolorem natus id?</dd>
+      </dl>
+    </section>
+
+    <section class="bg-gray-100 mt-8 py-8">
+      <div class="px-4">
+        <h2 class="title">[toml.try]</h2>
+        <p class="text-gray-600">Convert to and from JSON, JSON5, YAML and TOML</p>
+      </div>
+
+      <form class="mt-4">
+        <code class="code h-64 rounded-lg mt-4">
+          <pre class="whitespace-pre-line text-white">
+            <span class="text-gray-600">// json input here</span>
+          </pre>
+        </code>
+
+        <div class="mt-4 flex items-center px-4">
+          <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">From</label>
+          <div class="flex-1 relative ml-4">
+            <select
+              class="inline-block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="from">
+              <option>JSON</option>
+              <option>JSON5</option>
+              <option>YAML</option>
+              <option>TOML</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-2 flex items-center px-4">
+          <label class="w-12 text-right uppercase text-sm font-bold text-gray-700" for="from">To</label>
+          <div class="flex-1 relative ml-4">
+            <select
+              class="inline-block appearance-none bg-white w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="from">
+              <option>JSON</option>
+              <option>JSON5</option>
+              <option>YAML</option>
+              <option selected>TOML</option>
+            </select>
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" /></svg>
+            </div>
+          </div>
+        </div>
+
+        <code class="code h-64 rounded-lg mt-4">
+          <pre class="whitespace-pre-line text-white">
+            <span class="text-gray-600"># toml output here</span>
+          </pre>
+        </code>
+
+      </form>
+    </section>
+  </main>
+
+  <footer class="bg-orange-200 text-orange-800 text-center text-sm p-4">
+    <span class="font-mono">TOML</span> is &copy;2019 <a class="underline" href="https://tom.preston-werner.com/">Tom Preston-Werner</a>
+    <br>
+    <span class="font-mono">TOML</span> is released under the <a class="underline" href="https://github.com/toml-lang/toml/blob/master/LICENSE">MIT License</a>
+  </footer>
+</body>
+</html>
