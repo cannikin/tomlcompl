@@ -6,7 +6,8 @@ module.exports = {
       content: [
         './public/*.html'
       ],
-      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+      defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+      whitelist: ['tab-active']
     }),
     require('cssnano')({
       preset: [
