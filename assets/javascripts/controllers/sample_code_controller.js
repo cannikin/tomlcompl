@@ -6,7 +6,6 @@ export default class extends Controller {
   }
 
   connect() {
-    // default to TOML
     this._changeLanguage('toml')
   }
 
