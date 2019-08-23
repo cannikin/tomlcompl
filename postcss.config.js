@@ -9,7 +9,10 @@ module.exports = {
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
     }),
     require('cssnano')({
-      preset: 'default',
+      preset: [
+        'default',
+        { "discardComments": { "removeAll": true } }
+      ]
     })
   ]
 }
