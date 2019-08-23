@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="stylesheets/tailwind.css">
+  <script type="text/javascript" src="javascripts/main.js"></script>
 </head>
 
 <body class="bg-white text-gray-900 font-sans antialiased">
@@ -48,32 +49,68 @@
       <h3 class="mt-2 font-semibold text-xl text-center">[a_config_file_format_for_humans]</h3>
     </section>
 
-    <section class="pt-8 pb-12 bg-orange-100">
-      <code class="code rounded-t-lg">
-        <pre class="whitespace-pre-line text-white">
-          [<span class="text-blue-300">family</span>]
-          <span class="text-blue-600">spouse</span> = <span class="text-orange-500">"Aimee"</span>
-          <span class="text-blue-600">kids</span> = [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
-
-          [<span class="text-blue-300">foods</span>]
-          <span class="text-blue-600">favorite</span> = <span class="text-orange-500">"submarine sandwich"</span>
-          <span class="text-blue-600">acceptable</span> = <span class="text-orange-500">"pizza"</span>
-
-          <span class="text-blue-600">dob</span> = <span class="text-orange-500">"1978-04-16T07:32:00-05:00"</span>
-          <span class="text-blue-600">age</span> = <span class="text-green-500">41</span>
-          <span class="text-blue-600">coding</span> = true
+    <section class="pt-8 pb-12 bg-orange-100" data-controller="sample-code">
+      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="json">
+        <pre class="text-white">
+{
+  <span class="text-blue-300">"family"</span>: {
+    <span class="text-blue-300">"spouse"</span>: <span class="text-orange-500">"Aimee"</span>,
+    <span class="text-blue-300">"kids"</span>: [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
+  },
+  <span class="text-blue-300">"foods"</span>: {
+    <span class="text-blue-300">"favorite"</span>: <span class="text-orange-500">"submarine sandwich"</span>,
+    <span class="text-blue-300">"acceptable"</span>: <span class="text-orange-500">"pizza"</span>
+  },
+  <span class="text-blue-300">"dob"</span>: <span class="text-orange-500">"1978-04-16T12:32:00Z"</span>,
+  <span class="text-blue-300">"age"</span>: <span class="text-green-500">41</span>,
+  <span class="text-blue-300">"coding"</span>: <span class="text-blue-600">true</span>
+}
         </pre>
       </code>
-      <nav>
+
+      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="yaml">
+        <pre class="text-white">
+<span class="text-blue-600">family</span>:
+  <span class="text-blue-600">spouse</span>: <span class="text-orange-500">Aimee</span>
+  <span class="text-blue-600">kids</span>:
+    - <span class="text-orange-500">Jack</span>
+    - <span class="text-orange-500">Kate</span>
+<span class="text-blue-600">foods</span>:
+  <span class="text-blue-600">favorite</span>: <span class="text-orange-500">submarine sandwich</span>
+  <span class="text-blue-600">acceptable</span>: <span class="text-orange-500">pizza</span>
+<span class="text-blue-600">dob</span>: <span class="text-orange-500">1978-04-16T12:32:00Z</span>
+<span class="text-blue-600">age</span>: <span class="text-green-500">41</span>
+<span class="text-blue-600">coding</span>: <span class="text-blue-600">true</span>
+        </pre>
+      </code>
+
+      <code class="hidden code rounded-t-lg" data-target="sample-code.code" data-language="toml">
+        <pre class="text-white">
+[<span class="text-blue-300">family</span>]
+<span class="text-blue-600">spouse</span> = <span class="text-orange-500">"Aimee"</span>
+<span class="text-blue-600">kids</span> = [ <span class="text-orange-500">"Jack"</span>, <span class="text-orange-500">"Kate"</span> ]
+
+[<span class="text-blue-300">foods</span>]
+<span class="text-blue-600">favorite</span> = <span class="text-orange-500">"submarine sandwich"</span>
+<span class="text-blue-600">acceptable</span> = <span class="text-orange-500">"pizza"</span>
+
+<span class="text-blue-600">dob</span> = <span class="text-orange-500">"1978-04-16T07:32:00-05:00"</span>
+<span class="text-blue-600">age</span> = <span class="text-green-500">41</span>
+<span class="text-blue-600">coding</span> = true
+        </pre>
+      </code>
+
+      <nav class="-mt-px">
         <ul class="text-lg font-bold text-orange-700 flex rounded mx-4">
-          <li class="flex-1 py-2 text-center">
-            <a class="block" href="#">JSON</a>
+          <li class="flex-1 text-center">
+            <a data-target="sample-code.tab" data-action="click->sample-code#change" data-language="toml" class="block py-2"
+              href="#">TOML</a>
           </li>
-          <li class="flex-1 py-2 text-center">
-            <a href="">YAML</a>
+          <li class="flex-1 text-center">
+            <a data-target="sample-code.tab" data-action="click->sample-code#change" data-language="json" class="block py-2" href="#">JSON</a>
           </li>
-          <li class="flex-1 py-2 text-center bg-gray-900 text-gray-600 rounded-b">
-            <a href="#">TOML</a>
+          <li class="flex-1 text-center">
+            <a data-target="sample-code.tab" data-action="click->sample-code#change" data-language="yaml" class="block py-2" href="">YAML</a>
           </li>
         </ul>
       </nav>
