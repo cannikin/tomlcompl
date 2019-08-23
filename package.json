@@ -4,8 +4,8 @@
   "description": "Tailwind demo",
   "main": "index.js",
   "scripts": {
-    "build": "postcss css/tailwind.pcss -o public/stylesheets/tailwind.css",
-    "watch": "postcss css/tailwind.pcss -o public/stylesheets/tailwind.css --watch"
+    "build": "postcss assets/stylesheets/tailwind.pcss -o public/stylesheets/tailwind.css && uglifyjs assets/javascripts/*.js -o public/javascripts/app.js",
+    "watch": "postcss asseets/stylesheets/tailwind.pcss -o public/stylesheets/tailwind.css --watch"
   },
   "author": "Rob Cameron",
   "license": "MIT",
@@ -15,6 +15,7 @@
     "autoprefixer": "^9.6.1",
     "cssnano": "^4.1.10",
     "postcss-cli": "^6.1.3",
-    "tailwindcss": "^1.1.2"
+    "tailwindcss": "^1.1.2",
+    "uglify-js": "^3.6.0"
   }
 }
