@@ -7,6 +7,9 @@ module.exports = {
         './public/*.html'
       ],
       defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
+    }),
+    require('cssnano')({
+      preset: 'default',
     })
   ]
 }
